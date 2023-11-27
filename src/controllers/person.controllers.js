@@ -32,6 +32,16 @@ export const createPerson = (req, res) => {
     const {name, age, email, instagram, position, description} = req.body;
     //Array for message
     const error = [];
+    let personn = new Person({name, age, email, instagram, position, description});
+
+
+    let personAlreadyExists = list.getPersonByEmail(email);
+
+    if(personAlreadyExists){
+        error.push("Usuário já cadastrado");
+    }
+
+    list.addPersons(personn);
 
     //Verifications
     if(!name || !age || !email || !instagram || !position || !description){

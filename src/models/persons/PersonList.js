@@ -34,4 +34,9 @@ export class PersonList {
             }
         })
     }
+
+    getPersonByEmail(email){
+        let person = this.persons.find(person => person.email == email);
+        return person;
+    }
 }
