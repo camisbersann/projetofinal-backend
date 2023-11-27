@@ -46,3 +46,5 @@ class ClientService {
         return client;
     }
 }
+
+export default ClientService;

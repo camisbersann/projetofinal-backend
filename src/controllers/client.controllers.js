@@ -1,5 +1,5 @@
-import { Client } from '../models/client.model.js';
-import { ClientService } from '../models/client.service.js';
+import ClientPerson from '../models/clients/ClientPerson.js';
+import ClientService from '../models/clients/ClientService.js';
 
 const clientService = new ClientService();
 
@@ -25,8 +25,8 @@ export const getClientById = (req, res) => {
 }
 
 export const createClient = (req, res) => {
-    const { name, birthDate, email, password, money } = req.body;
-    let client = new Client({ name, birthDate, email, password, money });
+    const { name, birthDate, email, password, money, cpf, cep } = req.body;
+    let client = new ClientPerson({ name, birthDate, email, password, money, cpf, cep });
 
     let clientAlreadyExists = clientService.getClientByEmail(email);
 
@@ -54,20 +54,14 @@ export const deleteClientById = (req, res) => {
 
 export const updateClientById = (req, res) => {
     const { id } = req.params;
-    const { name, birthDate, email, password, money } = req.body;
+    const { name, birthDate, email, password, money, cpf, cep } = req.body;
     let client = clientService.getClientById(id);
 
     if (!client) {
         return res.status(404).send({ message: "Cliente não encontrado" });
     }
 
-    let updatedClient = {
-        name,
-        birthDate,
-        email,
-        password,
-        money
-    }
+    let updatedClient = new ClientPerson({ name, birthDate, email, password, money, cpf, cep });
 
     clientService.updateClientById(id, updatedClient);
 

@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-class Client {
+class ClientPerson {
     constructor({ name, birthDate, email, password, money, cpf, cep }) {
         this.id = uuidv4();
         this.name = name;
@@ -37,3 +37,5 @@ class Client {
         this.travels[arrayIndex] = updatedTravel;
     }
 }
+
+export default ClientPerson;
