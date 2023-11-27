@@ -39,5 +39,36 @@ export const createPerson = (req, res) => {
     list.addPersons(person);
 
     return res.status(200).send({message: "Cadastrado com sucesso", person});
+}
 
+export const updatePerson = (req, res) => {
+    const { id } = req.params;
+    const {name, birthDate, email, instagram, position, description} = req.body;
+    const error = [];
+ 
+    if(!name || !birthDate || !email || !instagram || !position || !description){
+        error.push("Preencha todos os campos");
+    }
+
+    if(name.length < 3){
+        error.push("Nome inválido, digite com 3 ou mais caracteres")
+    }
+
+    if(description.length > 150){
+        error.push("Digite com menos de 150 caracteres")
+    }
+
+   const person = list.getPersonsById(id)
+
+   if(!person){
+    error.push("Não há pessoas cadastradas")
+   }
+    if(error.length > 0){
+        res.status(400).send(error);
+        return
+    }
+
+    const updatePerson = list.updatePerson(id, name, birthDate, email, instagram, position, description)
+
+    return res.status(200).send({message: "Usuário atualizado com sucesso", updatePerson});
 }
