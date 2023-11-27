@@ -9,10 +9,10 @@ personsRoutes.get("/", getPerson);
 
 personsRoutes.get("/:id", getPersonById);
 
-personsRoutes.get("/", createPerson);
+personsRoutes.post("/", createPerson);
 
-personsRoutes.get("/:id", updatePerson);
+personsRoutes.put("/:id", updatePerson);
 
-personsRoutes.get("/:id", deletePerson);
+personsRoutes.delete("/:id", deletePerson);
 
 export default personsRoutes;

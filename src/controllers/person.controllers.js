@@ -12,7 +12,7 @@ export const getPerson = (req, res) =>{
     if(arrayPersons.length <= 0) {
         return res.status(200).send({message: "Não há pessoas cadastradas"});
     } else {
-        return res.status(200).send({message: "Cadastrado com sucesso"});
+        return res.status(200).send(arrayPersons);
     }
 }
 
@@ -29,12 +29,12 @@ export const getPersonById = (req, res) =>{
 
 //Function createPerson
 export const createPerson = (req, res) => {
-    const {name, birthDate, email, instagram, position, description} = req.body;
+    const {name, age, email, instagram, position, description} = req.body;
     //Array for message
     const error = [];
 
     //Verifications
-    if(!name || !birthDate || !email || !instagram || !position || !description){
+    if(!name || !age || !email || !instagram || !position || !description){
         error.push("Preencha todos os campos");
     }
 
@@ -52,7 +52,7 @@ export const createPerson = (req, res) => {
     }
 
     //Class instance
-    const person = new Person(name, birthDate, email, instagram, position, description)
+    const person = new Person(name, age, email, instagram, position, description)
 
     list.addPersons(person);
 
@@ -62,13 +62,13 @@ export const createPerson = (req, res) => {
 //Function updatePerson
 export const updatePerson = (req, res) => {
     const { id } = req.params;
-    const {name, birthDate, email, instagram, position, description} = req.body;
+    const {name, age, email, instagram, position, description} = req.body;
     //Array for message
     const error = [];
  
     
     //Verifications
-    if(!name || !birthDate || !email || !instagram || !position || !description){
+    if(!name || !age || !email || !instagram || !position || !description){
         error.push("Preencha todos os campos");
     }
 
@@ -90,7 +90,7 @@ export const updatePerson = (req, res) => {
         return
     }
 
-    const updatePerson = list.updatePerson(id, name, birthDate, email, instagram, position, description)
+    const updatePerson = list.updatePerson(id, name, age, email, instagram, position, description)
 
     return res.status(200).send({message: "Usuário atualizado com sucesso", updatePerson});
 }
