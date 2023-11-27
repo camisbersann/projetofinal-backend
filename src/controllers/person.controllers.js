@@ -72,3 +72,22 @@ export const updatePerson = (req, res) => {
 
     return res.status(200).send({message: "Usuário atualizado com sucesso", updatePerson});
 }
+
+export const deletePerson = (req, res) =>{
+    const { id } = req.params;
+    const person = list.getAllPersons(id);
+    const error = [];
+
+    if(!person){
+        error.push("Usuário não encontrado");
+    }
+
+    if(error.length > 0){
+        res.status(400).send(error);
+        return
+    }
+
+    list.removePerson(id);
+
+    return res.status(200).send({message: "Usuário deletado com sucesso"});
+}
