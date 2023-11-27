@@ -1,13 +1,15 @@
 import { v4 as uuidv4 } from "uuid";
 
 class Client {
-    constructor({ name, birthDate, email, password, money }) {
+    constructor({ name, birthDate, email, password, money, cpf, cep }) {
         this.id = uuidv4();
         this.name = name;
         this.birthDate = birthDate;
         this.email = email;
         this.password = password;
         this.money = money;
+        this.cpf = cpf;
+        this.cep = cep;
         this.createdAt = new Date();
         this.travels = [];
     }
