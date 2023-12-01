@@ -33,6 +33,12 @@ export const createClient = (req, res) => {
     if (clientAlreadyExists) {
         return res.status(400).send({ message: "Cliente já cadastrado" });
     }
+    
+    let errors = clientService.validateClient(client);
+
+    if (errors.length > 0) {
+        return res.status(400).send({ message: errors });
+    }
 
     clientService.addClient(client);
 
