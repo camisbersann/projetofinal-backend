@@ -68,8 +68,18 @@ export const createPerson = (req, res) => {
 
 //Function updatePerson
 export const updatePerson = (req, res) => {
+
     const { id } = req.params;
     const { name, age, email, instagram, position, description } = req.body;
+    console.log("AAAAAAAAAAAAAAAAAAA");
+    console.log(id);
+
+    console.log(name);
+    console.log(age);
+    console.log(email);
+    console.log(instagram);
+    console.log(position);
+    console.log(description);
     //Array for message
     const error = [];
 
@@ -97,6 +107,7 @@ export const updatePerson = (req, res) => {
         return
     }
 
+    
     const updatePerson = list.updatePerson(id, name, age, email, instagram, position, description)
 
     return res.status(200).send({ message: "Usuário atualizado com sucesso", updatePerson });
