@@ -19,7 +19,7 @@ body {
     width: 100%;
 }
 
-main {
+.geral {
     width: 100%;
     height: 100%;
     display: flex;
@@ -27,7 +27,7 @@ main {
     align-items: center;
 }
 
-main .card {
+.geral .card {
     width: 500px;
     background-color: var(--white);
     display: flex;
@@ -35,65 +35,65 @@ main .card {
     margin: 30px;
 }
 
-main .card .card__img,
-main .card .card__content {
+.geral .card .card__img,
+.geral .card .card__content {
     width: 50%;
 }
 
-main .card .card__img picture {
+.geral .card .card__img picture {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-main .card .card__img picture img {
+.geral .card .card__img picture img {
     width: 100%;
     height: 100%;
     border-radius: 12px 0px 0px 12px;
 }
 
-main .card .card__content {
+.geral .card .card__content {
     padding: 30px;
     display: flex;
     flex-direction: column;
     row-gap: 18px;
 }
 
-main .card .card__content .card__tag {
+.geral .card .card__content .card__tag {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 14px;
     color: var(--dark-grayish-blue);
 }
 
-main .card .card__content .card__title {
+.geral .card .card__content .card__title {
     font-family: 'Fraunces', serif;
     text-transform: capitalize;
 }
 
-main .card .card__content .card__desc {
+.geral .card .card__content .card__desc {
     font-size: 14px;
     color: var(--dark-grayish-blue);
     line-height: 24px;
 }
 
-main .card .card__content .card__price {
+.geral .card .card__content .card__price {
     display: flex;
     align-items: center;
     column-gap: 20px;
 }
 
-main .card .card__content .card__price h1 {
+.geral .card .card__content .card__price h1 {
     color: var(--dark-blue);
     font-family: 'Fraunces', serif;
 }
 
-main .card .card__content .card__price s {
+.geral .card .card__content .card__price s {
     font-size: 14px;
     color: var(--dark-grayish-blue);
 }
 
-main .card .card__content .card__btn {
+.geral .card .card__content .card__btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +110,7 @@ main .card .card__content .card__btn {
     transition: background 200ms linear;
 }
 
-main .card .card__content .card__btn:hover {
+.geral .card .card__content .card__btn:hover {
     background-color: var(--very-dark-blue);
 }
 
@@ -119,30 +119,89 @@ main .card .card__content .card__btn:hover {
         height: auto;
     }
 
-    main {
+    .geral {
         padding: 20px;
     }
 
-    main .card {
+    .geral .card {
         flex-direction: column;
     }
 
-    main .card .card__img,
-    main .card .card__content {
+    .geral .card .card__img,
+    .geral .card .card__content {
         width: 100%;
     }
 
-    main .card .card__img picture img {
+    .geral .card .card__img picture img {
         border-radius: 12px 12px 0px 0px;
     }
 
-    main .card .card__content {
+    .geral .card .card__content {
         padding: 20px;
         row-gap: 16px;
     }
 }
 
-.geral {
+/* ---------CARD------------ */
+
+.container {
+    height: 30vh;
     display: flex;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 12px;
+    width: 65%;
+    margin: 0 auto;
+    margin-left: 16%;
+    z-index: 0;
+}
+
+.qr {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-left: 7rem;
+    z-index: 2;
+}
+
+.qr:hover {
+    transform: scale(5);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 300px 20px rgba(0, 0, 0, 0.86);
+    -moz-box-shadow: 0px 0px 300px 20px rgba(0, 0, 0, 0.86);
+    box-shadow: 0px 0px 300px 20px rgba(0, 0, 0, 0.86);
+}
+
+.h1T {
+    font-family: 'Fraunces', serif;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+}
+
+.p {
+    font-size: 20px;
+    text-align: justify;
+    color: var(--dark-grayish-blue);
+    line-height: 24px;
+    width: 50%;
+}
+
+.texts {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.logoBG {
+    position: absolute;
+    top: 28rem;
+    right: -11.5rem;
+}
+
+.edit {
+    display: flex;
 }
