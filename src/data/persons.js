@@ -5,7 +5,8 @@ const membrosDaEquipe = [
         'email':'andrey-botero@aluno.senai.br',
         'instagram':'@__4drei',
         'position':'Coder Frontend',
-        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
+        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
+        'image':'/CumpriJPEG.jfif'
     },
     {
         'name':'Camila de Oliveira Bersan',
@@ -13,7 +14,8 @@ const membrosDaEquipe = [
         'email':'camila.bersan@aluno.senai.br',
         'instagram':'@camila.bersan',
         'position':'Tech Leader',
-        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
+        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
+        'image':'/CumpriJPEG.jfif'
     },
     {
         'name':'Enrico de Amorim Lona',
@@ -21,7 +23,8 @@ const membrosDaEquipe = [
         'email':'enrico-lona@aluno.senai.br',
         'instagram':'@enrico.l.07',
         'position':'Coder Frontend',
-        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
+        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
+        'image':'/CumpriJPEG.jfif'
     },
     {
         'name':'Rafael Custodio Cumpri',
@@ -29,7 +32,8 @@ const membrosDaEquipe = [
         'email':'rafael.cumpri@aluno.senai.br',
         'instagram':'@rafaelcumpri',
         'position':'Coder Backend',
-        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
+        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
+        'image':'/CumpriJPEG.jfif'
     },
     {
         'name':'Victor Hugo de Mattos Maria',
@@ -37,7 +41,8 @@ const membrosDaEquipe = [
         'email':'victormaria@aluno.senai.br',
         'instagram':'@iam.mattosz',
         'position':'Coder Frontend',
-        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
+        'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
+        'image':'/CumpriJPEG.jfif'
     },
 ]
 

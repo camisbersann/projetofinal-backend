@@ -7,8 +7,8 @@ import membrosDaEquipe from "../data/persons.js";
 const list = new PersonList();
 
 membrosDaEquipe.map((person) => {
-    const { name, age, email, instagram, position, description } = person;
-    const personInstance = new Person(name, age, email, instagram, position, description);
+    const { name, age, email, instagram, position, description, image} = person;
+    const personInstance = new Person(name, age, email, instagram, position, description, image);
     list.addPersons(personInstance);
 });
 
