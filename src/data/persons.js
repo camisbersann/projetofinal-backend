@@ -3,7 +3,7 @@ const membrosDaEquipe = [
         'name':'Andrey Ramos Botero',
         'age':16,
         'email':'andrey-botero@aluno.senai.br',
-        'instagram':'__4drei',
+        'instagram':'__4drey',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
         'image':'/CumpriJPEG.jfif'
