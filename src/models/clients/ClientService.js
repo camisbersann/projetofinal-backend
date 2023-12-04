@@ -5,7 +5,6 @@ class ClientService {
 
     addClient(client) {
         this.clients.push(client);
-        return true;
     }
 
     getClients() {
@@ -13,85 +12,60 @@ class ClientService {
     }
 
     getClientById(id) {
-        let client = this.clients.find(client => client.id === id);
-        return client;
+        return this.clients.find(client => client.id === id);
     }
 
     deleteClientById(id) {
-        let client = this.getClientById(id);
+        const client = this.getClientById(id);
 
         if (!client) {
             return false;
         }
 
-        let index = this.clients.indexOf(client);
+        const index = this.clients.indexOf(client);
         this.clients.splice(index, 1);
         return true;
     }
 
     updateClientById(id, updatedClient) {
-        let client = this.getClientById(id);
+        if (this.validateClient(updatedClient).length === 0) {
+            const client = this.getClientById(id);
 
-        if (!client) {
-            return false;
+            if (!client) {
+                return false;
+            }
+
+            const index = this.clients.indexOf(client);
+            this.clients[index] = updatedClient;
+            return true;
         }
 
-        let index = this.clients.indexOf(client);
-        this.clients[index] = updatedClient;
-        return true;
+        return false;
     }
 
-    getClientByEmail(email) {
-        let client = this.clients.find(client => client.email === email);
-        return client;
+        getClientByEmail(email) {
+        return this.clients.find(client => client.email === email);
     }
 
-    validateClient(client) {
-        let errors = [];
 
-        if (!client.name || !client.birthDate || !client.email || !client.password || !client.money || !client.cpf || !client.cep) {
-            errors.push("Preencha todos os campos");
-        }
+    validateCPF(cpf) {
+        const cpfRegex = /^\d{11}$/;
+        return cpfRegex.test(cpf);
+    }
 
-        if (client.name.length < 3) {
-            errors.push("Nome inválido, digite com 3 ou mais caracteres");
-        }
-
-        if (client.password.length < 6) {
-            errors.push("Senha inválida, digite com 6 ou mais caracteres");
-        }
-
-        if (client.cpf.length !== 11) {
-            errors.push("CPF inválido, digite com 11 caracteres");
-        }
-
-        if (client.cep.length !== 8) {
-            errors.push("CEP inválido, digite com 8 caracteres");
-        }
-
-        let age = this.calculateAge(client.birthDate);
-
-        if (age < 18) {
-            errors.push("Cliente menor de idade");
-        }
-
-        if (age > 120) {
-            errors.push("Cliente muito velho");
-        }
-
-        return errors;
+    validateCEP(cep) {
+        const cepRegex = /^\d{8}$/;
+        return cepRegex.test(cep);
     }
 
     calculateAge(birthDate) {
-        let today = new Date();
-        let birthDateArray = birthDate.split("-");
-        let birthYear = birthDateArray[0];
-        let birthMonth = birthDateArray[1];
-        let birthDay = birthDateArray[2];
-        let age = today.getFullYear() - birthYear;
-        let month = today.getMonth() + 1;
+        const today = new Date();
+        const birthDateObject = new Date(birthDate);
 
-        if (month < birthMonth || (month === birthMonth && today.getDate() < birthDay)) {
+        let age = today.getFullYear() - birthDateObject.getFullYear();
+        const month = today.getMonth() - birthDateObject.getMonth();
+
+        if (month < 0 || (month === 0 && today.getDate() < birthDateObject.getDate())) {
             age--;
         }
 

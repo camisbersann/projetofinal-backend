@@ -1,10 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
 
 class ClientPerson {
-    constructor({ name, birthDate, email, password, money, cpf, cep }) {
+    constructor(name, birthdate, email, password, money, cpf, cep) {
         this.id = uuidv4();
+        this.age = this.calculateAge(birthdate)
         this.name = name;
-        this.birthDate = birthDate;
+        this.birthdate = birthdate;
         this.email = email;
         this.password = password;
         this.money = money;
@@ -35,6 +36,20 @@ class ClientPerson {
     updateTravelByNumber(number, updatedTravel) {
         let arrayIndex = number - 1;
         this.travels[arrayIndex] = updatedTravel;
+    }
+
+    calculateAge(birthdate) {
+        const today = new Date();
+        const birthDateObject = new Date(birthdate);
+
+        let age = today.getFullYear() - birthDateObject.getFullYear();
+        const month = today.getMonth() - birthDateObject.getMonth();
+
+        if (month < 0 || (month === 0 && today.getDate() < birthDateObject.getDate())) {
+            age--;
+        }
+
+        return age;
     }
 }
 
