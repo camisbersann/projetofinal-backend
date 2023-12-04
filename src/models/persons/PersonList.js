@@ -22,7 +22,7 @@ export class PersonList {
         this.persons = this.persons.filter((person) => person.id !== id);
     }
 
-    updatePerson(id, name, age, email, instagram, position, description) {
+    updatePerson(id, name, age, email, instagram, position, description, image) {
         const index = this.persons.findIndex((person) => {
             if(person.id == id){
                 person.name =  name;
@@ -31,6 +31,7 @@ export class PersonList {
                 person.instagram = instagram;
                 person.position = position;
                 person.description = description;
+                person.image = image;
             }
         })
     }
