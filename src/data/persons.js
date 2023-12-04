@@ -3,7 +3,7 @@ const membrosDaEquipe = [
         'name':'Andrey Ramos Botero',
         'age':16,
         'email':'andrey-botero@aluno.senai.br',
-        'instagram':'@__4drei',
+        'instagram':'__4drei',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
     },
@@ -11,7 +11,7 @@ const membrosDaEquipe = [
         'name':'Camila de Oliveira Bersan',
         'age':16,
         'email':'camila.bersan@aluno.senai.br',
-        'instagram':'@camila.bersan',
+        'instagram':'camila.bersan',
         'position':'Tech Leader',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
     },
@@ -19,7 +19,7 @@ const membrosDaEquipe = [
         'name':'Enrico de Amorim Lona',
         'age':16,
         'email':'enrico-lona@aluno.senai.br',
-        'instagram':'@enrico.l.07',
+        'instagram':'enrico.l.07',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
     },
@@ -27,7 +27,7 @@ const membrosDaEquipe = [
         'name':'Rafael Custodio Cumpri',
         'age':18,
         'email':'rafael.cumpri@aluno.senai.br',
-        'instagram':'@rafaelcumpri',
+        'instagram':'rafael_cumpri',
         'position':'Coder Backend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
     },
@@ -35,7 +35,7 @@ const membrosDaEquipe = [
         'name':'Victor Hugo de Mattos Maria',
         'age':16,
         'email':'victormaria@aluno.senai.br',
-        'instagram':'@iam.mattosz',
+        'instagram':'iam.mattosz',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!'
     },
