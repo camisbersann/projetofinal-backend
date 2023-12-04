@@ -5,6 +5,9 @@ import { PersonList } from "../models/persons/PersonList.js";
 //Class instance
 const list = new PersonList();
 
+const pessoaDaEquipe = new Person('Rafael Custodio Cumpri', 17, 'rafael.cumpri@aluno.senai.br', '@rafaelcumpri', 'Coder Backend', 'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!')
+list.addPersons(pessoaDaEquipe)
+
 //Function getPerson
 export const getPerson = (req, res) => {
     const arrayPersons = list.getAllPersons();
