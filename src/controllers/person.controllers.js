@@ -7,8 +7,8 @@ import membrosDaEquipe from "../data/persons.js";
 const list = new PersonList();
 
 membrosDaEquipe.map((person) => {
-    const { name, age, email, instagram, position, description } = person;
-    const personInstance = new Person(name, age, email, instagram, position, description);
+    const { name, age, email, instagram, position, description, image} = person;
+    const personInstance = new Person(name, age, email, instagram, position, description, image);
     list.addPersons(personInstance);
 });
 
@@ -36,11 +36,11 @@ export const getPersonById = (req, res) => {
 
 //Function createPerson
 export const createPerson = (req, res) => {
-    const { name, age, email, instagram, position, description } = req.body;
+    const { name, age, email, instagram, position, description, image } = req.body;
     //Array for message
     const error = [];
      //Class instance
-     const person = new Person(name, age, email, instagram, position, description)
+     const person = new Person(name, age, email, instagram, position, description, image)
 
 
     let personAlreadyExists = list.getPersonByEmail(email);
@@ -77,7 +77,7 @@ export const createPerson = (req, res) => {
 export const updatePerson = (req, res) => {
 
     const { id } = req.params;
-    const { name, age, email, instagram, position, description } = req.body;
+    const { name, age, email, instagram, position, description, image} = req.body;
     console.log("AAAAAAAAAAAAAAAAAAA");
     console.log(id);
 
@@ -115,7 +115,7 @@ export const updatePerson = (req, res) => {
     }
 
     
-    const updatePerson = list.updatePerson(id, name, age, email, instagram, position, description)
+    const updatePerson = list.updatePerson(id, name, age, email, instagram, position, description, image)
 
     return res.status(200).send({ message: "Usuário atualizado com sucesso", updatePerson });
 }
