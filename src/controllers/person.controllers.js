@@ -1,12 +1,16 @@
 //Imports
 import { Person } from "../models/persons/Person.js";
 import { PersonList } from "../models/persons/PersonList.js";
+import membrosDaEquipe from "../data/persons.js";
 
 //Class instance
 const list = new PersonList();
 
-const pessoaDaEquipe = new Person('Rafael Custodio Cumpri', 17, 'rafael.cumpri@aluno.senai.br', '@rafaelcumpri', 'Coder Backend', 'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!')
-list.addPersons(pessoaDaEquipe)
+membrosDaEquipe.map((person) => {
+    const { name, age, email, instagram, position, description } = person;
+    const personInstance = new Person(name, age, email, instagram, position, description);
+    list.addPersons(personInstance);
+});
 
 //Function getPerson
 export const getPerson = (req, res) => {
