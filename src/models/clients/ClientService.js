@@ -12,7 +12,7 @@ class ClientService {
     }
 
     getClientById(id) {
-        return this.clients.find(client => client.id === id);
+        return this.clients.find(client => client.id == id);
     }
 
     deleteClientById(id) {
@@ -28,7 +28,7 @@ class ClientService {
     }
 
     updateClientById(id, updatedClient) {
-        if (this.validateClient(updatedClient).length === 0) {
+        if(updatedClient.length == 0){
             const client = this.getClientById(id);
 
             if (!client) {
@@ -44,7 +44,7 @@ class ClientService {
     }
 
         getClientByEmail(email) {
-        return this.clients.find(client => client.email === email);
+        return this.clients.find(client => client.email == email);
     }
 
 
@@ -65,7 +65,7 @@ class ClientService {
         let age = today.getFullYear() - birthDateObject.getFullYear();
         const month = today.getMonth() - birthDateObject.getMonth();
 
-        if (month < 0 || (month === 0 && today.getDate() < birthDateObject.getDate())) {
+        if (month < 0 || (month == 0 && today.getDate() < birthDateObject.getDate())) {
             age--;
         }
 

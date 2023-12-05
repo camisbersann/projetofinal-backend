@@ -81,12 +81,13 @@ export const updatePerson = (req, res) => {
     console.log("AAAAAAAAAAAAAAAAAAA");
     console.log(id);
 
-    console.log(name);
-    console.log(age);
-    console.log(email);
-    console.log(instagram);
-    console.log(position);
-    console.log(description);
+    // console.log(name);
+    // console.log(age);
+    // console.log(email);
+    // console.log(instagram);
+    // console.log(position);
+    // console.log(description);
+    
     //Array for message
     const error = [];
 
