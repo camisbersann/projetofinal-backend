@@ -23,17 +23,15 @@ export class PersonList {
     }
 
     updatePerson(id, name, age, email, instagram, position, description, image) {
-        const index = this.persons.findIndex((person) => {
-            if(person.id == id){
-                person.name =  name;
-                person.age = age;
-                person.email = email;
-                person.instagram = instagram;
-                person.position = position;
-                person.description = description;
-                person.image = image;
-            }
-        })
+        const person = this.getPersonsById(id);
+        person.name = name;
+        person.age = age;
+        person.email = email;
+        person.instagram = instagram;
+        person.position = position;
+        person.description = description;
+        person.image = image;
+        return person;
     }
 
     getPersonByEmail(email){

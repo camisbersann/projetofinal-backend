@@ -106,15 +106,6 @@ export const updatePerson = (req, res) => {
     }
 
     const person = list.getPersonsById(id)
-
-    if (!person) {
-        error.push("Não há pessoas cadastradas")
-    }
-    if (error.length > 0) {
-        res.status(400).send(error);
-        return
-    }
-
     
     const updatePerson = list.updatePerson(id, name, age, email, instagram, position, description, image)
 
