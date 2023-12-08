@@ -107,7 +107,7 @@ export const updateClientById = (req, res) => {
         return res.status(404).send({ message: "Cliente não encontrado" });
     }
 
-    let updatedClient = new ClientPerson({ name, birthdate, email, password, money, cpf, cep });
+    let updatedClient = new ClientPerson(name, birthdate, email, password, money, cpf, cep);
 
     clientService.updateClientById(id, updatedClient);
 

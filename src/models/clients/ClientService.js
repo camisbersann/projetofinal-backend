@@ -28,7 +28,7 @@ class ClientService {
     }
 
     updateClientById(id, updatedClient) {
-        if(updatedClient.length == 0){
+        if(updatedClient){
             const client = this.getClientById(id);
 
             if (!client) {
