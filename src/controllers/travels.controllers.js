@@ -5,8 +5,8 @@ import { StateTravel } from '../models/travels/StateTravels.js';
 const list = new StateTravel();
 
 travels.map((travel) => {
-    const { name, image, flag, description, capital, population, area, cities, region } = travel;
-    const travelInstance = new TravelModel(name, image, flag, description, capital, population, area, cities, region);
+    const { name, image, flag, description, capital, population, area, cities, region, coordenadasCapital } = travel;
+    const travelInstance = new TravelModel(name, image, flag, description, capital, population, area, cities, region, coordenadasCapital);
     list.addTravel(travelInstance);
 });
 

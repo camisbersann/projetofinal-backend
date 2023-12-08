@@ -10,6 +10,10 @@ const travels = [
         area: "903.366 km²",
         cities: "141",
         region: "Centro-Oeste",
+        coordenadasCapital: {
+            latitude: -15.601410,
+            longitude: -56.097893
+        },
     },
     {
         id: 2,
@@ -22,6 +26,10 @@ const travels = [
         area: "586.528 km²",
         cities: "853",
         region: "Sudeste",
+        coordenadasCapital: {
+            latitude: -19.815700,
+            longitude: -43.954200
+        }
     },
     {
         id: 3,
@@ -34,6 +42,10 @@ const travels = [
         area: "564.733 km²",
         cities: "417",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -12.970400,
+            longitude: -38.512400
+        }
     },
     {
         id: 4,
@@ -46,6 +58,10 @@ const travels = [
         area: "340.111 km²",
         cities: "246",
         region: "Centro-Oeste",
+        coordenadasCapital: {
+            latitude: -16.679900,
+            longitude: -49.255000
+        }
     },
     {
         id: 5,
@@ -58,6 +74,10 @@ const travels = [
         area: "199.307 km²",
         cities: "399",
         region: "Sul",
+        coordenadasCapital: {
+            latitude: -25.429700,
+            longitude: -49.271900
+        }
     },
     {
         id: 6,
@@ -70,6 +90,10 @@ const travels = [
         area: "95.736 km²",
         cities: "295",
         region: "Sul",
+        coordenadasCapital: {
+            latitude: -27.594500,
+            longitude: -48.547700
+        }
     },
     {
         id: 7,
@@ -82,6 +106,10 @@ const travels = [
         area: "148.920 km²",
         cities: "184",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -3.731900,
+            longitude: -38.526700
+        }
     },
     {
         id: 8,
@@ -94,6 +122,10 @@ const travels = [
         area: "281.748 km²",
         cities: "497",
         region: "Sul",
+        coordenadasCapital: {
+            latitude: -30.031800,
+            longitude: -51.206500
+        }
     },
     {
         id: 9,
@@ -106,6 +138,10 @@ const travels = [
         area: "248.222 km²",
         cities: "645",
         region: "Sudeste",
+        coordenadasCapital: {
+            latitude: -23.550500,
+            longitude: -46.633300
+        }
     },
     {
         id: 10,
@@ -118,6 +154,10 @@ const travels = [
         area: "98.311 km²",
         cities: "185",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -8.046660,
+            longitude: -34.877110
+        }
     },
     {
         id: 11,
@@ -130,6 +170,10 @@ const travels = [
         area: "1.570.745 km²",
         cities: "62",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: -3.119027,
+            longitude: -60.021731
+        }
     },
     {
         id: 12,
@@ -142,6 +186,10 @@ const travels = [
         area: "1.247.689 km²",
         cities: "144",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: -1.455780,
+            longitude: -48.490180
+        }
     },
     {
         id: 13,
@@ -154,6 +202,10 @@ const travels = [
         area: "43.696 km²",
         cities: "92",
         region: "Sudeste",
+        coordenadasCapital: {
+            latitude: -22.908300,
+            longitude: -43.196400
+        }
     },
     {
         id: 14,
@@ -166,6 +218,10 @@ const travels = [
         area: "46.077 km²",
         cities: "78",
         region: "Sudeste",
+        coordenadasCapital: {
+            latitude: -20.315500,
+            longitude: -40.312800
+        }
     },
     {
         id: 15,
@@ -178,6 +234,10 @@ const travels = [
         area: "27.778 km²",
         cities: "102",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -9.665990,
+            longitude: -35.735000
+        }
     },
     {
         id: 16,
@@ -190,6 +250,10 @@ const travels = [
         area: "52.796 km²",
         cities: "167",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -5.779260,
+            longitude: -35.200920
+        }
     },
     {
         id: 17,
@@ -202,6 +266,10 @@ const travels = [
         area: "56.439 km²",
         cities: "223",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -7.115090,
+            longitude: -34.864090
+        }
     },
     {
         id: 18,
@@ -214,6 +282,10 @@ const travels = [
         area: "331.937 km²",
         cities: "217",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -2.538740,
+            longitude: -44.282630
+        }
     },
     {
         id: 19,
@@ -226,6 +298,10 @@ const travels = [
         area: "164.122 km²",
         cities: "22",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: -9.974990,
+            longitude: -67.824300
+        }
     },
     {
         id: 20,
@@ -238,6 +314,10 @@ const travels = [
         area: "277.620 km²",
         cities: "139",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: -10.249090,
+            longitude: -48.324290
+        }
     },
     {
         id: 21,
@@ -250,6 +330,10 @@ const travels = [
         area: "357.145 km²",
         cities: "79",
         region: "Centro-Oeste",
+        coordenadasCapital: {
+            latitude: -20.448630,
+            longitude: -54.629370
+        }
     },
     {
         id: 22,
@@ -262,6 +346,10 @@ const travels = [
         area: "224.299 km²",
         cities: "15",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: 2.823460,
+            longitude: -60.675830
+        }
     },
     {
         id: 23,
@@ -274,6 +362,10 @@ const travels = [
         area: "237.576 km²",
         cities: "52",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: -8.761160,
+            longitude: -63.900430
+        }
     },
     {
         id: 24,
@@ -286,6 +378,10 @@ const travels = [
         area: "21.910 km²",
         cities: "75",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -10.947200,
+            longitude: -37.073900
+        }
     },
     {
         id: 25,
@@ -298,6 +394,10 @@ const travels = [
         area: "251.529 km²",
         cities: "224",
         region: "Nordeste",
+        coordenadasCapital: {
+            latitude: -5.091940,
+            longitude: -42.803440
+        }
     },
     {
         id: 26,
@@ -310,6 +410,10 @@ const travels = [
         area: "142.814 km²",
         cities: "16",
         region: "Norte",
+        coordenadasCapital: {
+            latitude: 0.034460,
+            longitude: -51.066630
+        }
     },
 ]
 

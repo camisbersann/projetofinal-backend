@@ -1,5 +1,5 @@
 export class TravelModel {
-    constructor(name, image, flag, description, capital, population, area, cities, region) {
+    constructor(name, image, flag, description, capital, population, area, cities, region, coordenadasCapital) {
         this.name = name;
         this.image = image;
         this.flag = flag;
@@ -11,6 +11,7 @@ export class TravelModel {
         this.region = region;
         this.price = 0
         this.distance = 0
+        this.coordenadasCapital = coordenadasCapital
     }
 
     getTravel() {
