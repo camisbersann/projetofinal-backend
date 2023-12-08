@@ -2,7 +2,7 @@
 import { Router } from "express";
 import personRoutes from "./person.routes.js";
 import clientRoutes from "./client.routes.js";
-import travelRoutes from "./travel.routes.js";
+import travelRoutes from "./travels.routes.js";
 
 //Route
 const rotas = Router();

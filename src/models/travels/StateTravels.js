@@ -1,4 +1,4 @@
-class StateTravel {
+export class StateTravel {
     constructor() {
         this.norte = [];
         this.nordeste = [];

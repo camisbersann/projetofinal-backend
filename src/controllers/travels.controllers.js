@@ -1,8 +1,8 @@
 import travels from '../data/travels.js'
 import { TravelModel } from '../models/travels/TravelModel.js';
-import { TravelList } from '../models/travels/TravelList.js';
+import { StateTravel } from '../models/travels/StateTravels.js';
 
-const list = new TravelList();
+const list = new StateTravel();
 
 travels.map((travel) => {
     const { name, image, flag, description, capital, population, area, cities, region } = travel;
