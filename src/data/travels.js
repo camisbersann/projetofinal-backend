@@ -418,6 +418,8 @@ const travels = [
 ]
 
 // api para comparar distancia entre as capitais e ver a viagem
-// https://api.distancematrix.ai/maps/api/distancematrix/json?origins=0.034460,-51.066630&destinations=-20.448630,-54.629370&key=NUG8TVeZxS6TXWwQdv6bMZWWiwCfkKSV6E5IfZ3wdMsGRg7KSkm9jLMVYkGRM3xd
+// https://api.distancematrix.ai/maps/api/distancematrix/json?origins={lat,lon}&destinations={lat,lon}&key=NUG8TVeZxS6TXWwQdv6bMZWWiwCfkKSV6E5IfZ3wdMsGRg7KSkm9jLMVYkGRM3xd
+// https://api.distancematrix.ai/maps/api/geocode/json?address={endereco}&key=THy76mc8EB7DE1g30epsm4owSuuPhlcIUemw9hpBiKGmRZSs6GaeMd7VijKHQ1N4
+// https://viacep.com.br/ws/{cep}/json/
 
 export default travels;
