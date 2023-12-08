@@ -417,4 +417,7 @@ const travels = [
     },
 ]
 
+// api para comparar distancia entre as capitais e ver a viagem
+// https://api.distancematrix.ai/maps/api/distancematrix/json?origins=0.034460,-51.066630&destinations=-20.448630,-54.629370&key=NUG8TVeZxS6TXWwQdv6bMZWWiwCfkKSV6E5IfZ3wdMsGRg7KSkm9jLMVYkGRM3xd
+
 export default travels;
