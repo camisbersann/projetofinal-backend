@@ -11,11 +11,20 @@ travels.map((travel) => {
 });
 
 export const getTravels = (req, res) => {
+    const { state, litoral } = req.query;
     const arrayTravels = list.getAllTravels();
 
     if (arrayTravels.length <= 0) {
         return res.status(200).send({ message: "Não há viagens cadastradas" });
     } else {
-        return res.status(200).send(arrayTravels);
+        if(state) {
+            const travels = list.getTravelByRegion(state);
+            return res.status(200).send(travels);
+        }
+
+        if(litoral) {
+            const travels = list.getTravelInLitoral();
+            return res.status(200).send(travels);
+        }
     }
 }
