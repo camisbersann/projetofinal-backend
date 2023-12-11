@@ -6,7 +6,7 @@ const membrosDaEquipe = [
         'instagram':'__4drey',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
-        'image':'/CumpriJPEG.jfif'
+        'image':'/Andrey.jpg'
     },
     {
         'name':'Camila de Oliveira Bersan',
@@ -24,7 +24,7 @@ const membrosDaEquipe = [
         'instagram':'enrico.l.07',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
-        'image':'/CumpriJPEG.jfif'
+        'image':'/en.jpg'
     },
     {
         'name':'Rafael Custodio Cumpri',
@@ -42,7 +42,7 @@ const membrosDaEquipe = [
         'instagram':'iam.mattosz',
         'position':'Coder Frontend',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
-        'image':'/CumpriJPEG.jfif'
+        'image':'/Victormattos.jpg'
     },
 ]
 
