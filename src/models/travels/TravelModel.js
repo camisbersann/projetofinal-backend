@@ -1,5 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 export class TravelModel {
     constructor(name, image, flag, description, capital, population, area, cities, region, coordenadasCapital) {
+        this.id = uuidv4();
         this.name = name;
         this.image = image;
         this.flag = flag;

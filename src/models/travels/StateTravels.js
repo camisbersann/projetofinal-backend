@@ -1,42 +1,14 @@
 export class StateTravel {
     constructor() {
-        this.norte = [];
-        this.nordeste = [];
-        this.centroOeste = [];
-        this.sudeste = [];
-        this.sul = [];
+        this.travels = [];
     }
 
     addTravel(travel) {
-        switch (travel.region) {
-            case 'Norte':
-                this.norte.push(travel);
-                break;
-            case 'Nordeste':
-                this.nordeste.push(travel);
-                break;
-            case 'Centro-Oeste':
-                this.centroOeste.push(travel);
-                break;
-            case 'Sudeste':
-                this.sudeste.push(travel);
-                break;
-            case 'Sul':
-                this.sul.push(travel);
-                break;
-            default:
-                break;
-        }
+        this.travels.push(travel);
     }
 
     getAllTravels() {
-        return {
-            norte: this.norte,
-            nordeste: this.nordeste,
-            centroOeste: this.centroOeste,
-            sudeste: this.sudeste,
-            sul: this.sul
-        };
+        return this.travels;
     }
 
     getTravelByRegion(region) {
