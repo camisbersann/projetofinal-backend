@@ -25,23 +25,4 @@ export class StateTravel {
 
         return null;
     }
-
-    getTravelInLitoral() {
-        const litoralStates = ['Bahia', 'Ceará', 'Maranhão', 'Paraíba', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Santa Catarina', 'São Paulo', 'Alagoas', 'Espírito Santo', 'Pará', 'Paraná', 'Rio Grande do Sul', 'Sergipe'];
-        const arrayTravels = this.getAllTravels();
-
-        let returnedTravels = []
-
-        arrayTravels.map((travel) => {
-            const travels = Object.values(travel);
-
-            for (let i = 0; i < travels.length; i++) {
-                const travel = travels[i];
-
-                if (litoralStates.includes(travel.name)) {
-                    returnedTravels.push(travel)
-                }
-            }
-        });
-    }
 }

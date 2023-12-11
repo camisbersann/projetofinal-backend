@@ -26,5 +26,7 @@ export const getTravels = (req, res) => {
             const travels = list.getTravelInLitoral();
             return res.status(200).send(travels);
         }
+
+        return res.status(200).send(arrayTravels);
     }
 }
