@@ -15,7 +15,7 @@ const membrosDaEquipe = [
         'instagram':'camila.bersan',
         'position':'Tech Leader',
         'description':'Estudante de programação na turma desenvolvimento de sistema do SENAI de valinhos!',
-        'image':'/CumpriJPEG.jfif'
+        'image':'/camis.jpg'
     },
     {
         'name':'Enrico de Amorim Lona',
