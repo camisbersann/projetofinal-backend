@@ -30,6 +30,7 @@ class ClientService {
     updateClientById(id, updatedClient) {
         if(updatedClient){
             const client = this.getClientById(id);
+            updatedClient.id = client.id;
 
             if (!client) {
                 return false;

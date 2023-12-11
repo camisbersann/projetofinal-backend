@@ -48,7 +48,7 @@ export const deleteClientById = (req, res) => {
 
 export const updateClientById = (req, res) => {
     const { id } = req.params;
-    const { name, birthdate, email, password, money, cpf, cep } = req.body;
+    const { name, birthdate, email, password, money, cpf, cep, travels } = req.body;
     let client = clientService.getClientById(id);
 
     if (!client) {
@@ -56,6 +56,8 @@ export const updateClientById = (req, res) => {
     }
 
     let updatedClient = new ClientPerson(name, birthdate, email, password, money, cpf, cep);
+
+    updatedClient.travels = travels;
 
     clientService.updateClientById(id, updatedClient);
 
