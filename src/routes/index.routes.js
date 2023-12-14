@@ -3,7 +3,7 @@ import { Router } from "express";
 import personRoutes from "./person.routes.js";
 import clientRoutes from "./client.routes.js";
 import travelRoutes from "./travels.routes.js";
-import contactRoutes from "./contact.routes.js";
+import contactRoutes from "./contato.routes.js";
 
 //Route
 const rotas = Router();

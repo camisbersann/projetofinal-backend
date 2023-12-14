@@ -1,5 +1,5 @@
-import { ContactMessage } from "../models/contacts/contactMessage";
-import { ContactList } from "../models/contacts/contactsList";
+import { ContactMessage } from "../models/contacts/contactMessage.js";
+import { ContactList } from "../models/contacts/contactsList.js";
 
 const list = new ContactList();
 
