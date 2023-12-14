@@ -63,8 +63,7 @@ export const createPerson = (req, res) => {
     }
 
     if (error.length > 0) {
-        res.status(400).send(error);
-        return
+        return res.status(400).send({errors : error});
     }
 
 
