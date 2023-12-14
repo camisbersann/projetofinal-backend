@@ -12,6 +12,14 @@ export const createContact = (req, res) => {
 
     const contact = new ContactMessage(email, message);
 
+    if (!email || !message) {
+        return res.status(400).send({ message: "Preencha todos os campos" });
+    }
+
+    if(message.length < 10){
+        return res.status(400).send({ message: "Digite com mais de 10 caracteres" });
+    }
+
     list.addContact(contact);
 
     return res.status(200).send({ message: "Mensagem enviada com sucesso!", contact });
